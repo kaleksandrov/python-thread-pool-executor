@@ -114,7 +114,7 @@ class ThreadPoolExecutor(object):
         """
         Stops the executor. Stopping does not happen immediately, the worker threads will execute all the tasks
         from the queue before stopping. The client can choose if to wait the stopping process to finish or
-        to allow this to happen in the backgroud.
+        to allow this to happen in the background.
         :param blocking: If should wait for the stopping process to finish by blocking the current thread.
         """
         with self._lock:
