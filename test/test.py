@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
-from __future__ import with_statement
+import sys
+sys.path.append('../src')
 
 from random import random
 from threading import RLock
 from time import sleep
 
-from threadpoolexecutor import ThreadPoolExecutor
+from threadingex.threadpoolexecutor import ThreadPoolExecutor
 
 lock = RLock()
 result = {}
