@@ -2,7 +2,7 @@
 ## What is this?
 This is an implementation of the **Thread Pool Executor** pattern written in **Python** langugage. I find it quite useful when writing multithreaded programs as the responsibility for managing the threads lies on the executor. This logic was officially added in version *3.2* of the languge but there are still tons of projects that are running on version *2.\** (like mine).
 
-## How to install
+## How to use
 Just copy this file somewhere in your project and import it. Here is a sample example of how to use the executor class:
 ```python
    from threadpoolexecutor import ThreadPoolExecutor
