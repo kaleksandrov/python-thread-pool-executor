@@ -5,7 +5,7 @@ This is an implementation of the **Thread Pool Executor** pattern written in **P
 ## How to use
 Just copy this file somewhere in your project and import it. Here is a sample example of how to use the executor class:
 ```python
-   from threadpoolexecutor import ThreadPoolExecutor
+   from threadingex.threadpoolexecutor import ThreadPoolExecutor
    ...
 
    def task1(value):
