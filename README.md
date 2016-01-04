@@ -31,10 +31,10 @@ Just copy this file somewhere in your project and import it. Here is a sample ex
    # there is a waiting thread, it starts executing it,
    # otherwise - the tasks remains in a queue. Once a thread
    # becomes available it checks in the queue for pending tasks.
-   executor.submit(task1, value1, value2)
-   executor.submit(task1, value3)
-   executor.submit(task2, value4, value5, value6)
-   executor.submit(task2, value7)
+   executor.submit(task1, value2, value3)
+   executor.submit(task4, value5)
+   executor.submit(task6, value7, value8, value9)
+   executor.submit(task10, value11)
    ...
 
    # When you are ready you can request a shutdown on the executor.
