@@ -23,17 +23,28 @@ Just copy this file somewhere in your project and import it. Here is a sample ex
    # Instantiate the executor with the desired number of threads.
    executor = ThreadPoolExecutor(16)
 
-   # Launch the threads. At this point they are up and waiting for a task to be submitted for an execution.
+   # Launch the threads. At this point they are up and waiting
+   # for a task to be submitted for an execution.
    executor.start()
 
-   # Submit any number of tasks. When a task is submited if there is a waiting thread, it starts executing it, otherwise - the tasks remains in a queue. Once a thread becomes available it checks in the queue for pending tasks.
-   executor.submit(task1, value1)
-   executor.submit(task1, value2)
-   executor.submit(task2, value3)
-   executor.submit(task2, value4)
+   # Submit any number of tasks. When a task is submited if
+   # there is a waiting thread, it starts executing it,
+   # otherwise - the tasks remains in a queue. Once a thread
+   # becomes available it checks in the queue for pending tasks.
+   executor.submit(task1, value2, value3)
+   executor.submit(task4, value5)
+   executor.submit(task6, value7, value8, value9)
+   executor.submit(task10, value11)
    ...
 
-   # When you are ready you can request a shutdown on the executor. This does not happen immediately. The executor will stop when there is no pending task in the queue. However after the shutdown is initiated no new task can be submitted. You can pass an optional argument to the method that indicates if you want to block the current thread and wait for the executor to be completely stopped or you want this process to happen in the background while the current thread continues its execution.
+   # When you are ready you can request a shutdown on the executor.
+   # This does not happen immediately. The executor will stop when
+   # there is no pending task in the queue. However after the shutdown
+   # is initiated no new task can be submitted. You can pass an optional
+   # argument to the method that indicates if you want to block the
+   # current thread and wait for the executor to be completely stopped
+   # or you want this process to happen in the background while the
+   # current thread continues its execution.
    executor.shutdown(True)
 ```
 
